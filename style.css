@@ -13,6 +13,9 @@ header {
   background-color: #b9b9b9;
   color: black;
   font-size: 25px;
+  display: flex;
+  justify-content: center; /* sentrerer horisontalt */
+  align-items: center;     /* sentrerer vertikalt */
   padding: 5px 0;
 }
 
@@ -130,8 +133,11 @@ a {
 
 /* 📱 MOBILVENNLIG VERSJON */
 @media (max-width: 600px) {
+  header .logo {
+  height: 120px;
+  }
   header.hest-header {
-    height: 180px;
+  height: 180px;
   }
 
   header.hest-header h1 {
