@@ -1,0 +1,158 @@
+/* 🎨 GENERELT UTSEENDE */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #a9a9a9;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🧭 HEADER (vanlig og med bilde) */
+header {
+  background-color: #b9b9b9;
+  color: black;
+  font-size: 25px;
+  padding: 5px 0;
+}
+
+/* Logo i headeren */
+header .logo {
+  height: 180px;
+  width: auto;
+}
+
+/* 📸 Header-bilde med tekst oppå */
+header.hest-header {
+  background-image: url('bilder/hest.jpg'); /* Bytt til ditt eget bilde */
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Lett skygge under bildet */
+}
+
+/* Mørkt filter over header-bildet */
+header.hest-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Teksten oppå bildet */
+header.hest-header h1 {
+  position: relative;
+  font-size: 2.5em;
+  z-index: 1;
+}
+
+/* Hvis du bruker et faktisk <img> som header-bilde */
+.header-bilde {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 🧾 HOVEDINNHOLD */
+main {
+  padding: 20px;
+  font-size: 26px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ✨ Messinghest-bilder */
+.messinghestar img {
+  width: 100%;
+  max-width: 600px; /* maks størrelse på desktop */
+  height: auto;
+}
+
+/* 🌍 FLAGG-SEKSJON – alltid 2 kolonner */
+.flagg-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flagg-container img {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 8px;
+  background: white; /* hvit bakgrunn for flaggene */
+  padding: 2px;
+}
+
+.flagg-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🖼️ Klikkbart bilde (egen klasse) */
+.klikkbart-bilde {
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.klikkbart-bilde:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 📜 FOOTER */
+footer {
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+/* 🔗 Lenker */
+a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+/* 📱 MOBILVENNLIG VERSJON */
+@media (max-width: 600px) {
+  header.hest-header {
+    height: 180px;
+  }
+
+  header.hest-header h1 {
+    font-size: 1.6em;
+    padding: 0 10px;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+
+  .flagg-container {
+    gap: 10px;
+    max-width: 350px;
+  }
+
+  .flagg-container img {
+    width: 100px;
+  }
+
+  .messinghestar img {
+    width: 100%;
+    max-width: 300px; /* litt mindre på mobil */
+  }
+}
+

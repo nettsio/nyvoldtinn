@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NYVOLD TINN</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <img src="bilder/Logo.svg" alt="Nyvold Tinn logo" class="logo">
+  </header>
+
+  <main>
+    <p>Våre prosjekt (klikk bilete)</p>
+
+    <a href="hestane.html">
+    <img src="bilder/hestane.jpg" alt="Gå til neste side" class="klikkbart-bilde">
+    </a>
+  </main>
+  
+ <footer>
+        <p>© 2025 Nyvold Tinn, Etne</p>
+        <span id="epost"></span>
+      <script>
+           const bruker = "harhoy";
+           const domene = "gmail.com";
+           const adresse = bruker + "@" + domene;
+           document.getElementById("epost").innerHTML =
+  `        <a href="mailto:${adresse}">E-post</a>`;
+      </script>
+ </footer>
+
+</body>
+
+</html>
