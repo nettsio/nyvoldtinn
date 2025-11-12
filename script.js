@@ -11,21 +11,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-// Google Analytics sporing for alle sider
-(function() {
-  const GA_ID = 'G-ABC123XYZ'; // <-- Bytt ut med egen måle-ID
-
-  // Last inn Google Analytics-scriptet
-  const gtagScript = document.createElement('script');
-  gtagScript.async = true;
-  gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-  document.head.appendChild(gtagScript);
-
-  // Initialiser Analytics når scriptet er lastet
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.gtag = gtag;
-  gtag('js', new Date());
-  gtag('config', GA_ID);
-})();
